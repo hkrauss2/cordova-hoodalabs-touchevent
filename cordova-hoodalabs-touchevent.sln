@@ -3,18 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "www", "www", "{57A5F772-5E99-4695-9D91-59959B385DE2}"
-	ProjectSection(SolutionItems) = preProject
-		touchevent.js = touchevent.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{307B7DD7-4A47-4C65-86BA-64703FE50B2D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34E63435-E79B-4147-9911-6D6315E57F02}"
-	ProjectSection(SolutionItems) = preProject
-		plugin.xml = plugin.xml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
