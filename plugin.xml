@@ -1,1 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="net.hoodalabs.cordova.plugins.touchevent"
+    version="1.0.0">
+
+    <name>Touch Event</name>
+    <description>Simulates a touch event at the given coordinates or on a specific element</description>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/touchevent.js" name="touchevent">
+        <clobbers target="cordova.plugins.touchevent" />
+    </js-module>
+
+    <platform name="android">
+        <source-file src="src/android/net/hoodalabs/cordova/plugins/touchevent/HoodalabsTouchEvent.java" target-dir="src/net/hoodalabs/cordova/plugins/touchevent/" />
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="HoodalabsTouchEvent">
+                <param name="android-package" value="net.hoodalabs.cordova.plugins.touchevent.HoodalabsTouchEvent" />
+            </feature>
+        </config-file>
+        <js-module src="www/touchevent.android.js" name="touchevent.android">
+            <merges target="cordova.plugins.touchevent" />
+        </js-module>
+    </platform>
+
+</plugin>
