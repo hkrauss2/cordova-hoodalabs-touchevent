@@ -21,3 +21,24 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
+
+var touchEvent = {};
+
+touchEvent.fireAt = function (x, y) {
+  //platform specific files override this function
+    console.log('touchEvent not supported on device');
+};
+
+touchEvent.fireOn = function ($elem) {
+  var x = Math.round( $elem.offset().left + $elem.width()/2 );
+  var y = Math.round( $elem.offset().top + $elem.height()/2 );
+
+  if ( document.documentElement.clientWidth != window.innerWidth ) {
+    x = Math.round( x*window.devicePixelRatio );
+    y = Math.round( y*window.devicePixelRatio );
+  }
+  
+  touchEvent.fireAt(x, y);
+};
+
+module.exports = touchEvent;
